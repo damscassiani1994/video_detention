@@ -17,7 +17,7 @@ public class Main
 {
 
     private static final String YOLO_PATH = "/Users/damaso/Documents/Proyectos/opencv/yolo/yolov3";
-    private static final String LIB_PATH = "/Users/damaso/Documents/Proyectos/java/IA/objects_detection/video_detection/libs";
+    private static final String LIB_PATH = "/Users/damaso/Documents/Proyectos/java/IA/objects_detection/video_detention/libs";
     static {
         System.load(LIB_PATH.concat("/libopencv_java4110.dylib"));
     }
