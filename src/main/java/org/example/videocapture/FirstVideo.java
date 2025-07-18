@@ -6,7 +6,6 @@ import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;
 
 import java.util.Map;
-import java.util.concurrent.ScheduledExecutorService;
 
 public class FirstVideo {
 

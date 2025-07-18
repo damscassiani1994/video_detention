@@ -4,15 +4,10 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import org.example.videocapture.FirstVideo;
 import org.opencv.core.Core;
-import org.opencv.core.Mat;
 import org.opencv.dnn.Net;
-import org.opencv.highgui.HighGui;
-import org.opencv.osgi.OpenCVInterface;
-import org.opencv.videoio.VideoCapture;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Hello world!
@@ -26,16 +21,7 @@ public class Main
     static {
         System.load(LIB_PATH.concat("/libopencv_java4110.dylib"));
     }
-    private static List<String> getOutputNames(Net net) {
-        List<String> names = new ArrayList<>();
 
-        List<Integer> outLayers = net.getUnconnectedOutLayers().toList();
-        List<String> layersNames = net.getLayerNames();
-
-
-        outLayers.forEach((item) -> names.add(layersNames.get(item - 1)));//unfold and create R-CNN layers from the loaded YOLO model//
-        return names;
-    }
     public static void main( String[] args )
     {
 
