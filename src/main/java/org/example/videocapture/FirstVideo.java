@@ -1,6 +1,7 @@
 package org.example.videocapture;
 
 import org.opencv.core.Mat;
+import org.opencv.core.Rect;
 import org.opencv.highgui.HighGui;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.videoio.VideoCapture;

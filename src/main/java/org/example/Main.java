@@ -2,12 +2,8 @@ package org.example;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-import org.example.videocapture.FirstVideo;
+import org.example.facedetention.FaceDetention;
 import org.opencv.core.Core;
-import org.opencv.dnn.Net;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Hello world!
@@ -29,8 +25,12 @@ public class Main
         String modelWeights =  YOLO_PATH + "/yolov3.weights";//Download and load only wights for YOLO , this is obtained from official YOLO site//
         String modelConfiguration = YOLO_PATH + "/yolov3.cfg";//Download and load cfg file for YOLO , can be obtained from official site//
 
-        FirstVideo firstVideo = new FirstVideo();
-        firstVideo.Excute();
+        //FirstVideo firstVideo = new FirstVideo();
+        //firstVideo.Excute();
+
+        // Practice for apply face detection using OpenCV
+        FaceDetention faceDetention = new FaceDetention();
+        faceDetention.Excute();
     }
 }
 
