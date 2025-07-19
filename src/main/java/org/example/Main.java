@@ -28,7 +28,7 @@ public class Main
         //FirstVideo firstVideo = new FirstVideo();
         //firstVideo.Excute();
 
-        // Practice for apply face detection using OpenCV
+        // Practice for apply face detection using LBP Cascade OpenCV
         FaceDetention faceDetention = new FaceDetention();
         faceDetention.Excute();
     }
