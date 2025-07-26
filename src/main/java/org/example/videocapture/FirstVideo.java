@@ -9,9 +9,11 @@ import org.opencv.videoio.VideoCapture;
 
 import java.util.Map;
 
+import static org.example.util.DetentionConstant.PATH_RESOURCES;
+
 public class FirstVideo implements IDetention {
 
-    private static final String PATH_RESOURCES = "res/images/";
+
 
     @Override
     public void excute() {
