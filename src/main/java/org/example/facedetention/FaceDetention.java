@@ -1,5 +1,6 @@
 package org.example.facedetention;
 
+import org.example.interfaces.IDetention;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
 import org.opencv.core.Point;
@@ -9,10 +10,11 @@ import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 import org.opencv.videoio.VideoCapture;
 
-public class FaceDetention {
+public class FaceDetention implements IDetention {
     private static final String LBP_PATH = "res/lbpcascade/";
 
-    public void Excute() {
+    @Override
+    public void excute() {
         // Create face detector using LBP (Local Binary Patterns) cascade classifier
         CascadeClassifier faceCascade = loadCascadeClassifier("lbpcascade_frontalface.xml");
 
@@ -35,10 +37,9 @@ public class FaceDetention {
                 faceCascade.detectMultiScale(frame, faces); // Detect faces in the captured frame
 
                 // Draw rectangles around detected faces
-                faces.toList().forEach(rect -> {
+                faces.toList().forEach(rect ->
                     Imgproc.rectangle(frame, new Point(rect.x, rect.y),
-                            new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(0, 0, 255));
-                });
+                            new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(0, 0, 255)));
 
                 HighGui.imshow("Video", frame); // Display the captured frame in a window
                 int key = HighGui.waitKey(50); // Wait for 30 milliseconds for a key press
