@@ -28,7 +28,7 @@ public class Main
         String modelWeights =  YOLO_PATH + "/yolov3.weights";//Download and load only wights for YOLO , this is obtained from official YOLO site//
         String modelConfiguration = YOLO_PATH + "/yolov3.cfg";//Download and load cfg file for YOLO , can be obtained from official site//
 
-        IDetention detention = new Main().getDetention("test");
+        IDetention detention = new Main().getDetention("firstVideo");
         detention.excute();
 
     }
@@ -37,7 +37,7 @@ public class Main
     public IDetention getDetention(String type) {
         return switch (type) {
             // Practice for apply face detection using LBP Cascade OpenCV
-            case "face" -> new FaceDetention();
+            case "lbpFaceDetection" -> new FaceDetention();
             // Practice for apply video capture, filters and photo using OpenCV
             case "firstVideo"-> new FirstVideo();
             // Tests for apply image using OpenCV
