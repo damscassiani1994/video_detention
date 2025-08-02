@@ -35,9 +35,7 @@ public class FirstVideo implements IDetention {
                     Imgproc.cvtColor(frame, frame, getFilter(valueActual)); // Apply the selected filter
                 }
 
-                // Process key presses for contrast and brightness
-                //frame = pressKeyProcess(pressedKey, alpha, valueActual, frame);
-
+                // Process key presses for contrast and brightness;
                 if (HighGui.pressedKey == 93 || HighGui.pressedKey == 91) {
                     pressedKey = HighGui.pressedKey;
                     if (HighGui.pressedKey == 93) {
