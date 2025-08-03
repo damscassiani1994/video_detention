@@ -28,7 +28,7 @@ public class Main
         String modelWeights =  YOLO_PATH + "/yolov3.weights";//Download and load only wights for YOLO , this is obtained from official YOLO site//
         String modelConfiguration = YOLO_PATH + "/yolov3.cfg";//Download and load cfg file for YOLO , can be obtained from official site//
 
-        IDetention detention = new Main().getDetention("firstVideo");
+        IDetention detention = new Main().getDetention("test");
         detention.excute();
 
     }

@@ -31,7 +31,6 @@ public class DetentionTest implements IDetention {
         // Convert the Mat to BufferedImage for display
         // Can pass as parameter for getBufferedImageFromMat the methods created further down
         BufferedImage bufferedImage = DetentionUtil.getBufferedImageFromMat(changeContrastAndBrightness(frame));
-        HighGui.imshow("Girl", frame);
 
         // Display the image in a JFrame window
         JFrame frameWindow = new JFrame("Image Display");
